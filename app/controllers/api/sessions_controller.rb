@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class Api::SessionsController < ApplicationController
 
     def new
       render :new
@@ -17,8 +17,6 @@ class SessionsController < ApplicationController
     def destroy
       log_out
       # render :json
-
     end
-
 
 end
