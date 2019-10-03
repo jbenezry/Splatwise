@@ -1,6 +1,6 @@
 //need to import action constant that reducer will be checking for
-import RECEIVE_SESSION_ERRORS from '../actions/session_actions';
-import RECEIVE_CURRENT_USER from '../actions/session_actions';
+import {RECEIVE_SESSION_ERRORS} from '../actions/session_actions';
+import {RECEIVE_CURRENT_USER} from '../actions/session_actions';
 
 //totally cool to write reducer BEFORE imports, as long as imports are added afterwards based on reducer
 

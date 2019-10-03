@@ -6,47 +6,49 @@ class SignupForm extends React.Component {
     super(props);
     this.state = this.props.signupFields
   }
-}
 
-handleSubmit(e) {
-  this.props.signup(this.state)
-}
 
-update(field) {
-  return e => {
-    this.setState({
-      [field]: e.target.value
-    })
+  handleSubmit(e) {
+    this.props.signup(this.state);
   }
-}
 
-render() {
-  return (
-    <div>
+  update(field) {
+    return e => {
+      this.setState({
+        [field]: e.target.value
+      })
+    }
+  }
 
-      <label>INTRODUCE YOURSELF</label>
-      <form onSubmit={this.handleSubmit}>
+  render() {
+    debugger
+    return (
+      <div>
 
-        <label>Hi there! My name is
-          <input onChange={this.update('name')} type="text" value={this.state.name}/>
-        </label>
+        <label>INTRODUCE YOURSELF</label>
+        <form onSubmit={this.handleSubmit}>
 
-        <label>Here’s my email address:
-          <input onChange={this.update('email')} type="text" value={this.state.email}/>
-        </label>
+          <label>Hi there! My name is
+            <input onChange={this.update('name')} type="text" value={this.state.name}/>
+          </label>
 
-        <label>And here’s my password:
-          <input onChange={this.update('password')} type="text" value={this.state.password}/>
-        </label>
+          <label>Here’s my email address:
+            <input onChange={this.update('email')} type="text" value={this.state.email}/>
+          </label>
 
-        <input type="submit" value="Sign me up" />
-        {/* <button onClick="external link" value="G Sign up with Google"></button> */}
-      </form>
+          <label>And here’s my password:
+            <input onChange={this.update('password')} type="text" value={this.state.password}/>
+          </label>
 
-      <label>By signing up, you accept the Splatwise Terms of Service.</label>
-      <label>Don't use USD for currency? Click here.</label>
-    </div>
-  )
+          <input type="submit" value="Sign me up" />
+          {/* <button onClick="external link" value="G Sign up with Google"></button> */}
+        </form>
+
+        <label>By signing up, you accept the Splatwise Terms of Service.</label>
+        <label>Don't use USD for currency? Click here.</label>
+      </div>
+    )
+  }
 }
 
 export default SignupForm;

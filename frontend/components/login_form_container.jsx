@@ -1,13 +1,12 @@
 import { connect } from 'react-redux'
-import SignupForm from './signup_form'
-import { signup } from '../actions/session_actions'
+import LoginForm from './login_form'
+import { login } from '../actions/session_actions'
 
 // need to import {connect}, the component we contain, and any needed actions for mdp...?
 
 const msp = state => {
   return {
-    signupFields: { 
-      name: "",
+    loginFields: {
       email: "",
       password: "",
     }
@@ -16,9 +15,9 @@ const msp = state => {
 
 const mdp = dispatch => {
   return {
-    signup: (user) => dispatch(signup(user))
+    login: (user) => dispatch(login(user))
   }
 }
 
 
-export default connect(msp, mdp)(SignupForm)
+export default connect(msp, mdp)(LoginForm)
