@@ -7,10 +7,10 @@ class Api::UsersController < ApplicationController
       @user = user.new
       if @user.save
         log_in!(user)
-        # render :json
+        render :json
       else
         flash.now[:errors] = @user.errors.full_messages
-        # render :new
+        render :new
       end
     end
 

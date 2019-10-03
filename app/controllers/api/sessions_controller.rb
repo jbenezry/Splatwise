@@ -8,7 +8,7 @@ class Api::SessionsController < ApplicationController
       user = User.find_by_credentials(params[:user][:username], params[:user][:password])
       if user
         log_in!(user)
-        # render :json
+        render :json
       else
         flash.now[:errors] = @user.errors.full_messages
         # render :new 
@@ -16,7 +16,7 @@ class Api::SessionsController < ApplicationController
 
     def destroy
       log_out
-      # render :json
+      render :json
     end
 
 end

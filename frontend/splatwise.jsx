@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom'
 import Root from './components/root';
 import configureStore from './store/store';
 import { login, logout, signup } from './actions';
+import HashRouter from 'react-router-dom'
+
 
 document.addEventListener('DOMContentLoaded', () => {
   let store = configureStore();
