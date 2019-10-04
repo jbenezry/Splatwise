@@ -3,6 +3,13 @@ class User < ApplicationRecord
   validates :username, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 8, presence: true}
 
+# Possible signup errors include:
+# - First name can't be blank
+# - Email address can't be blank
+# - Please enter a valid email address.
+# - Password is too short (minimum is 8 characters)
+# - Password is too common (e.g. '12345', 'password', etc) - please choose something more complex or unique
+
   after_initialize :ensure_session_token
 
   attr_accessor :password
@@ -17,7 +24,7 @@ class User < ApplicationRecord
   end
 
   def self.generate_session_token
-    SecureRandom::urlsafe(base64)
+    SecureRandom::urlsafe_base64
   end
 
   def reset_session_token!

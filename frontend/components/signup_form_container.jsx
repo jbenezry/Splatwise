@@ -7,7 +7,7 @@ import { signup } from '../actions/session_actions'
 const msp = state => {
   return {
     signupFields: { 
-      name: "",
+      username: "",
       email: "",
       password: "",
     }
@@ -15,6 +15,7 @@ const msp = state => {
 }
 
 const mdp = dispatch => {
+  // debugger
   return {
     signup: (user) => dispatch(signup(user))
   }

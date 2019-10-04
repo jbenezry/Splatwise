@@ -4,10 +4,12 @@ class Api::UsersController < ApplicationController
     end
 
     def create
-      @user = user.new
+      debugger
+      @user = User.new(user_params)
+      debugger
       if @user.save
-        log_in!(user)
-        render :json
+        login!(@user)
+        render :show
       else
         flash.now[:errors] = @user.errors.full_messages
         render :new
@@ -15,7 +17,7 @@ class Api::UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:username, :password)
+      params.require(:user).permit(:username, :email, :password)
     end
 
 end

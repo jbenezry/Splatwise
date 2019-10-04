@@ -12,10 +12,11 @@ class Api::SessionsController < ApplicationController
       else
         flash.now[:errors] = @user.errors.full_messages
         # render :new 
+      end
     end
 
     def destroy
-      log_out
+      logout
       render :json
     end
 

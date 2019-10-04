@@ -4,12 +4,15 @@ import { withRouter } from 'react-router-dom';
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.loginFields
+    this.state = this.props.loginFields;
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
   handleSubmit(e) {
-    this.props.login(this.state)
+    debugger
+    e.preventDefault();
+    this.props.login(this.state);
   }
 
   update(field) {

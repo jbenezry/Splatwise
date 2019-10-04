@@ -5,10 +5,13 @@ class SignupForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.signupFields
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
 
   handleSubmit(e) {
+    // debugger
+    e.preventDefault();
     this.props.signup(this.state);
   }
 
@@ -29,7 +32,7 @@ class SignupForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
 
           <label>Hi there! My name is
-            <input onChange={this.update('name')} type="text" value={this.state.name}/>
+            <input onChange={this.update('username')} type="text" value={this.state.name}/>
           </label>
 
           <label>Here’s my email address:
@@ -39,6 +42,8 @@ class SignupForm extends React.Component {
           <label>And here’s my password:
             <input onChange={this.update('password')} type="text" value={this.state.password}/>
           </label>
+
+          {/* RECAPTCHA - I'm not a robot */}
 
           <input type="submit" value="Sign me up" />
           {/* <button onClick="external link" value="G Sign up with Google"></button> */}
