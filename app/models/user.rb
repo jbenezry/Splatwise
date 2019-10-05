@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 
   validates :username, :password_digest, :session_token, presence: true
-  validates :password, length: { minimum: 8, presence: true}
+  validates :password, length: { minimum: 8, allow_nil: true}
 
 # Possible signup errors include:
 # - First name can't be blank
@@ -37,8 +37,9 @@ class User < ApplicationRecord
     self.session_token ||= User.generate_session_token
   end
 
-  def self.find_by_credentials(username, password)
-    user = User.find_by(username)
+  def self.find_by_credentials(email, password)
+    # debugger  
+    user = User.find_by(email: email)
     user && user.is_password?(password) ? user : nil
   end
 

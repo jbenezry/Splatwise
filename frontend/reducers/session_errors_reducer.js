@@ -8,6 +8,7 @@ const sessionErrorsReducer = (state = [], action) => {
   Object.freeze(state)
   switch (action.type) {
     case RECEIVE_SESSION_ERRORS:
+      // debugger
       return action.errors;
     // the receive_current_user case is 2nd so that errors will be caught
       case RECEIVE_CURRENT_USER:

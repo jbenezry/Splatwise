@@ -9,7 +9,8 @@ const msp = state => {
     loginFields: {
       email: "",
       password: "",
-    }
+    },
+    errors: state.errors.session
   }
 }
 

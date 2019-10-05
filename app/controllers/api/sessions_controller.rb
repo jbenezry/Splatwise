@@ -5,19 +5,23 @@ class Api::SessionsController < ApplicationController
     end
 
     def create
-      user = User.find_by_credentials(params[:user][:username], params[:user][:password])
-      if user
-        log_in!(user)
-        render :json
+      # debugger
+      @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
+      if @user
+        # debugger
+        login!(@user)
+        # debugger
+        render 'api/users/show'
       else
-        flash.now[:errors] = @user.errors.full_messages
-        # render :new 
+        # debugger
+        render json: ['invalid credentials'], status: 422
+        # we want to render errors in an array 
       end
     end
 
     def destroy
       logout
-      render :json
+ 
     end
 
 end

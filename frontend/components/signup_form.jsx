@@ -27,6 +27,9 @@ class SignupForm extends React.Component {
     // debugger
     return (
       <div>
+        <ul>
+          {this.props.errors}
+        </ul>
 
         <label>INTRODUCE YOURSELF</label>
         <form onSubmit={this.handleSubmit}>
@@ -40,7 +43,7 @@ class SignupForm extends React.Component {
           </label>
 
           <label>And here’s my password:
-            <input onChange={this.update('password')} type="text" value={this.state.password}/>
+            <input onChange={this.update('password')} type="password" value={this.state.password}/>
           </label>
 
           {/* RECAPTCHA - I'm not a robot */}

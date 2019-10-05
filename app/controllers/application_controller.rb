@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-  # helper_method :current_user, :ensure_logged_in  # do we need this for front-end views?
+  helper_method :current_user, :ensure_logged_in 
   
     def login!(user)
       session[:session_token] = user.reset_session_token!

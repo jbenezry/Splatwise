@@ -25,10 +25,17 @@ export const receiveErrors = errors => ({
 //   );
 
 export const signup = user => dispatch => {
-  // debugger;
-  APIUtil.signup(user).then((user) => {
-    dispatch(receiveCurrentUser(user))
-  });
+  // debugger
+  APIUtil.signup(user).then(
+    user => {
+      // debugger
+      dispatch(receiveCurrentUser(user));
+    },
+    err => {
+      // debugger
+      dispatch(receiveErrors(err.responseJSON))
+    }
+  );
 }
 
 // export const login = user => dispatch =>
@@ -37,13 +44,19 @@ export const signup = user => dispatch => {
 //     err => dispatch(receiveErrors(err.responseJSON))
 //   );
 
-export const login = (user) => (dispatch) => {
-  // debugger
-  APIUtil.login(user).then((user) => {
-    // debugger
-    dispatch(receiveCurrentUser(user));
-  })
-}
+export const login = user => dispatch => {
+  // debugger;
+  APIUtil.login(user).then(
+    user => {
+      // debugger;
+      dispatch(receiveCurrentUser(user));
+    },
+    err => {
+      // debugger;
+      dispatch(receiveErrors(err.responseJSON));
+    }
+  );
+};
 
 export const logout = () => dispatch =>
   APIUtil.logout().then(() => dispatch(logoutCurrentUser()));

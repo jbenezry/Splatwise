@@ -10,9 +10,9 @@ class LoginForm extends React.Component {
 
 
   handleSubmit(e) {
-    debugger
+    // debugger
     e.preventDefault();
-    this.props.login(this.state);
+    this.props.login(this.state) //.then( () => this.props.history.push('/greeting'));
   }
 
   update(field) {
@@ -24,8 +24,12 @@ class LoginForm extends React.Component {
   }
 
   render() {
+    
     return (
       <div>
+        <ul>
+          {this.props.errors}
+        </ul>
 
         <label>WELCOME TO SPLATWISE</label>
         <form onSubmit={this.handleSubmit}>
@@ -35,7 +39,7 @@ class LoginForm extends React.Component {
           </label>
 
           <label>Password
-            <input onChange={this.update('password')} type="text" value={this.state.password}/>
+            <input onChange={this.update('password')} type="password" value={this.state.password}/>
           </label>
 
           <input type="submit" value="Log in" />
