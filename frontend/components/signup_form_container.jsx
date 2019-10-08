@@ -10,7 +10,8 @@ const msp = state => {
       username: "",
       email: "",
       password: "",
-    }
+    },
+    errors: state.errors.session
   }
 }
 

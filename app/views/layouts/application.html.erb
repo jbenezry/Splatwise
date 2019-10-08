@@ -8,14 +8,20 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <% if current_user  %>
+    <%# below we set the currentUser to the window and then set it equal to an object with keys and values that match what's being rendered in our show.json.jbuilder file%>
       <script>
+      
       window.currentUser = {
         'id': <%= current_user.id %>,
         'username': '<%= current_user.username %>'
       }
       </script>
     <% end %>
+      <script type='text/javascript'>
+        window.logoSquareURL = '<%= image_url('logo-square.svg') %>'
+      </script>
     
   </head>
 

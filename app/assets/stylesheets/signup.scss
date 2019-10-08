@@ -1,0 +1,109 @@
+.wrapper {
+  // font-size: 45px;
+  // background-image: image_url('logo-square.svg');
+  display: flex;
+  color: #333333;
+  justify-content: center;
+}
+
+.signup-page-left {
+  display: flex;
+  flex-direction: column;
+  // justify-content: 
+  align-content: flex-start;
+}
+
+.signup-page-right {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  padding: 30px
+}
+
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  
+}
+
+.logo-square {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #999;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 24px;
+  line-height: 140%;
+  margin: 16px 0 5px;
+}
+
+.name-input {
+  font-size: 32px;
+  height: 42px;
+  margin-top: 7px;
+    //   color: #333;
+    // width: 95%;
+    // line-height: 110%;
+    // margin-bottom: 17px;
+}
+
+.email {
+  font-size: 18px;
+}
+
+.email-input {
+  color: #333;
+  font-size: 20px;
+  width: 95%;
+  height: 28px;
+  line-height: 110%;
+  margin-top: 7px;
+  margin-bottom: 17px;
+}
+
+.password {
+  font-size: 18px;
+}
+
+.password-input {
+  color: #333;
+  font-size: 20px;
+  width: 95%;
+  height: 28px;
+  line-height: 110%;
+  margin-top: 7px;
+  margin-bottom: 17px;
+}
+
+.signup-button {
+  width: 165px;
+  height: 60px;
+  background: #ff652f;
+  color: #fff;
+  text-shadow: 0 -1px 0 #c83400;
+  border-radius: 5px;
+  font-size: 24px;
+  // box-shadow: #999;
+}
+
+.errors {
+  background: #cc4455;
+  color: white;
+  padding: 5px 10px;
+  list-style: circle;
+}

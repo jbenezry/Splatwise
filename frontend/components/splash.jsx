@@ -6,6 +6,7 @@ const Splash = props => {
     <div>
       <h1>Welcome to Splatwise</h1>
       <Link to='/signup'>Signup</Link>
+      <p> </p>
       <Link to='/login'>Login</Link>
     </div>
   )

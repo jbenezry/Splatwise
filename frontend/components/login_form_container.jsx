@@ -5,6 +5,7 @@ import { login } from '../actions/session_actions'
 // need to import {connect}, the component we contain, and any needed actions for mdp...?
 
 const msp = state => {
+  // debugger
   return {
     loginFields: {
       email: "",
@@ -15,6 +16,7 @@ const msp = state => {
 }
 
 const mdp = dispatch => {
+  // debugger
   return {
     login: (user) => dispatch(login(user))
   }

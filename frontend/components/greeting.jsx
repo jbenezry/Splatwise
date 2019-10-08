@@ -12,7 +12,7 @@ class Greeting extends React.Component {
     return (
       <div>
         {this.state.username}
-        <input onClick={this.props.logout} type="submit" value="Log Out"/>
+        <input className="logout" onClick={this.props.logout} type="submit" value="Log Out"/>
       </div>
     )
   }

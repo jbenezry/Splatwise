@@ -6,6 +6,7 @@ class LoginForm extends React.Component {
     super(props);
     this.state = this.props.loginFields;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
 
@@ -23,36 +24,53 @@ class LoginForm extends React.Component {
     }
   }
 
+  renderErrors() {
+    const errors = this.props.errors.map(error => (
+      <li key={error}>
+        {error}
+      </li>
+    ))
+    return (
+      <ul className="errors">
+        <p>The following errors occurred:</p><br/>
+        {errors}
+      </ul>
+    )
+  }
+  
   render() {
     
     return (
-      <div>
-        <ul>
-          {this.props.errors}
-        </ul>
+      <div className='wrapper'>
+        <div className='login-page-left'>
+          <img className="logo-square" src={window.logoSquareURL} alt="logo-square" />
+        </div>
+        <div className='login-page-right'>
+          {this.renderErrors()}
+          
+          <h2>WELCOME TO SPLATWISE</h2>
+          <form onSubmit={this.handleSubmit}>
 
-        <label>WELCOME TO SPLATWISE</label>
-        <form onSubmit={this.handleSubmit}>
+            <div>Email address
+              <input onChange={this.update('email')} type="text" value={this.state.email}/>
+            </div>
 
-          <label>Email address
-            <input onChange={this.update('email')} type="text" value={this.state.email}/>
-          </label>
+            <div>Password
+              <input onChange={this.update('password')} type="password" value={this.state.password}/>
+            </div>
 
-          <label>Password
-            <input onChange={this.update('password')} type="password" value={this.state.password}/>
-          </label>
+            <input type="submit" value="Log in" />
+            {/* <button onClick="external link" value="G Sign up with Google"></button> */}
+          </form>
 
-          <input type="submit" value="Log in" />
-          {/* <button onClick="external link" value="G Sign up with Google"></button> */}
-        </form>
+          {/* <div>Forgot your password?
+            <a href="">Click here</a>
+          </div>
 
-        <label>Forgot your password?
-          <a href="">Click here</a>
-        </label>
-
-        <label>Or log in with <a href="">Facebook</a></label>
-        <label>/</label>
-        <label><a href="">G Google</a></label>
+          <div>Or log in with <a href="">Facebook</a></div>
+          <div>/</div>
+          <div><a href="">G Google</a></div> */}
+        </div>
       </div>
     )
   }
