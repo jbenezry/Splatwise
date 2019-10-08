@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 
-  validates :username, :password_digest, :session_token, presence: true
+  validates :username, :email, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 8, allow_nil: true}
 
 # Possible signup errors include:

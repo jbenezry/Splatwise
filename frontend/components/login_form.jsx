@@ -26,50 +26,62 @@ class LoginForm extends React.Component {
 
   renderErrors() {
     const errors = this.props.errors.map(error => (
-      <li key={error}>
-        {error}
-      </li>
+      <p key={error}>Whoops! We couldn’t find an account for that email address and password.</p>
     ))
     return (
-      <ul className="errors">
-        <p>The following errors occurred:</p><br/>
-        {errors}
-      </ul>
+      <div className="login-errors">
+        {/* {errors} */}
+        <ul>
+          {errors}
+        </ul>
+      </div>
     )
   }
   
   render() {
-    
+    const errors = this.props.errors.length ? this.renderErrors() : ""
     return (
-      <div className='wrapper'>
-        <div className='login-page-left'>
-          <img className="logo-square" src={window.logoSquareURL} alt="logo-square" />
-        </div>
-        <div className='login-page-right'>
-          {this.renderErrors()}
-          
-          <h2>WELCOME TO SPLATWISE</h2>
-          <form onSubmit={this.handleSubmit}>
-
-            <div>Email address
-              <input onChange={this.update('email')} type="text" value={this.state.email}/>
-            </div>
-
-            <div>Password
-              <input onChange={this.update('password')} type="password" value={this.state.password}/>
-            </div>
-
-            <input type="submit" value="Log in" />
-            {/* <button onClick="external link" value="G Sign up with Google"></button> */}
-          </form>
-
-          {/* <div>Forgot your password?
-            <a href="">Click here</a>
+      <div className='overall'>
+        <nav className='nav-bar'>
+          <img className='logo-wordmark' src={window.logoWordmarkURL} alt='logo-wordmark'/>
+          <input className='nav-signup-button' type="submit" value="Sign Up" />
+        </nav>
+        <div className='wrapper'>
+          <div className='login-page-left'>
+            <img className="logo-square" src={window.logoSquareURL} alt="logo-square" />
           </div>
+          <div className='login-page-right'>
+            {this.renderErrors()}
+            
+            <h2>Welcome to Splatwise</h2>
+            <form onSubmit={this.handleSubmit}>
 
-          <div>Or log in with <a href="">Facebook</a></div>
-          <div>/</div>
-          <div><a href="">G Google</a></div> */}
+              <div className='email'>Email address
+                <input className='email-input' onChange={this.update('email')} type="text" value={this.state.email}/>
+              </div>
+
+              <div className='password'>Password
+                <input className='password-input' onChange={this.update('password')} type="password" value={this.state.password}/>
+              </div>
+
+              <input className='login-button' type="submit" value="Log in" />
+              {/* <button onClick="external link" value="G Sign up with Google"></button> */}
+            </form>
+
+            {/* <div>Forgot your password?
+              <a href="">Click here</a>
+            </div>
+
+            <div>Or log in with <a href="">Facebook</a></div>
+            <div>/</div>
+            <div><a href="">G Google</a></div> */}
+          </div>
+        </div>
+        <div className='footer'>
+          <footer>
+            <p className='made-with-smiles'>Made with ☻ in Providence, RI, USA</p>
+            <p className='copyright'>Copyright © 2019 Splitwise, Inc. All rights reserved</p>
+          </footer>
         </div>
       </div>
     )

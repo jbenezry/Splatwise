@@ -41,10 +41,10 @@ h2 {
   line-height: 20px;
 }
 
-.signup-form {
-  display: flex;
-  flex-direction: column;
-}
+// .signup-form {
+//   display: flex;
+//   flex-direction: column;
+// }
 
 .name {
   font-size: 24px;
@@ -101,9 +101,15 @@ h2 {
   // box-shadow: #999;
 }
 
-.errors {
+.signup-button:hover {
+  background-color: #fc4605; //formerly set to #c83400, whcih is the text-shadow color;
+  cursor: pointer;
+}
+
+.signup-errors {
   background: #cc4455;
   color: white;
   padding: 5px 10px;
   list-style: circle;
 }
+

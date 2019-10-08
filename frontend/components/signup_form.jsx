@@ -25,30 +25,40 @@ class SignupForm extends React.Component {
   }
   
   renderErrors() {
-    const errors = this.props.errors.map(error => (
-      <li key={error}>
-        {error}
-      </li>
-    ))
+    const errors = this.props.errors.map(error => {
+      if (error.startsWith('Username can\'t')) {
+        return (<li key={error}>First name can't be blank</li>)
+      } else {
+        return (
+          <li key={error}>
+            {error}
+          </li>
+        )
+      }
+    })
     return (
-      <ul className="errors">
+      <div className="signup-errors">
         <p>The following errors occurred:</p>
-        {errors}
-      </ul>
+        <ul>
+          {errors}
+        </ul>
+      </div>
     )
   }
   
+  
   render() {
     // debugger
+    const errors = this.props.errors.length ? this.renderErrors() : "" // 0 is falsey in JS, so checking the length of the errors array effects a conditional
     return (
       <div className='wrapper'>
         <div className='signup-page-left'>
-          <img className="logo-square" src={window.logoSquareURL} alt="logo-square" />
+          <img className='logo-square' src={window.logoSquareURL} alt='logo-square' />
         </div>
         <div className='signup-page-right'>
-          {this.renderErrors()}
-
           <h2>Introduce Yourself</h2>
+          {errors}
+          
           <form className="signup-form" onSubmit={this.handleSubmit}>
 
             <div className='name'><strong>Hi there! My name is</strong><br/>

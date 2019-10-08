@@ -1,0 +1,96 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  color: #fff;
+  background-color: #5bc5a7;
+  text-shadow: 0 -1px 0 #39a385;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  
+  
+}
+
+.nav-signup-button {
+  background-color: #ff652f;
+  color: #fff;
+  text-shadow: 0 -1px 0 #c83400;
+  font-size: 14px;
+  padding: 4px 10px 4px;
+  border-radius: 4px;
+  height: 30px;
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);// why are there three? I copied this from dev tools
+  margin: 10px 10px;
+}
+
+.nav-signup-button:hover {
+  background-color: #fc4605;
+  cursor: pointer;
+}
+
+.logo-wordmark {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  height: 24px;
+  padding: 12px 10px;
+}
+
+.login-button {
+  background-color: #ff652f;
+  color: #fff;
+  text-shadow: 0 -1px 0 #c83400;
+  font-size: 18px;
+  padding: 4px 10px 4px;
+  border-radius: 5px;
+  width: 90px;
+  height: 45px;
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);// why are there three? I copied this from dev tools
+  margin: 10px 10px;
+}
+
+.login-button:hover {
+  background-color: #fc4605;
+  cursor: pointer;
+}
+
+.login-page-left {
+  display: flex;
+  flex-direction: column;
+  // justify-content: 
+  align-content: flex-start;
+}
+
+.login-page-right {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  padding: 30px
+}
+
+.footer {
+  padding: 20px;
+  min-height: 74px;
+  position: relative;
+  z-index: 1;
+  background: #666;
+  color: #fff;
+  font-size: 18px;
+  text-shadow: 0 -1px 0 #000000;
+  display: flex;
+  justify-content: center;
+}
+
+.made-with-smiles {
+  font-size: 24px;
+}
+
+.copyright {
+  font-size: 16px;
+}
+
+.login-errors {
+  background: #cc4455;
+  color: white;
+  padding: 5px 10px;
+  
+}
