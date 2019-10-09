@@ -14,6 +14,17 @@ class User < ApplicationRecord
 
   attr_accessor :password
 
+  has_many :friends,
+  class_name: 'User',
+  foreign_key: :requestor_id
+
+  belongs_to :user,
+  class_name: 'User',
+  foreign_key: :requestee_id
+
+  # user has many friends through friendships.  make friendships table and model
+
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)

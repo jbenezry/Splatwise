@@ -33,9 +33,29 @@ Things you may want to cover:
 7. move on to Expenses - before Friends?
 8. move on to Friends
 
+### Splash Page
+- Add Main Image on right side
+- Add Sign Up button on left side
+- Add Logo at top left corner
+- Add link to Log In and Sign Up at top right corner
+- Add Header with text 'Less stress when sharing expenses with anyone' or something to that effect
+​
+### Log In Page
+- Remove Greeting `Welcome to Splatwise` and move links to right side of nav bar
+- Remove errors div above form
+- Navbar should be flush with top of screen, footer should be flush with bottom
+- Splitwise should say Splatwise in top left corner!
+
+### Friendships Table
+- need model-level validation for inclusion.  database constraint doesn't exit
+- migration - make status a string.
+- need a pointer from user to their friends.  user has_many friends through friendships
+
+
+
+
   # use parens for markup
   # use curlies for blocks of code
-
 # Questions
 1. How do I change 'username' to 'First name' in the error messages?
   # add conditional to map in renderErrors

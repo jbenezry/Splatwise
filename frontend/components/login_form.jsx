@@ -44,6 +44,7 @@ class LoginForm extends React.Component {
       <div className='overall'>
         <nav className='nav-bar'>
           <img className='logo-wordmark' src={window.logoWordmarkURL} alt='logo-wordmark'/>
+          <p className='logo-splatmark'>Splatwise</p>
           <input className='nav-signup-button' type="submit" value="Sign Up" />
         </nav>
         <div className='wrapper'>
@@ -80,7 +81,7 @@ class LoginForm extends React.Component {
         <div className='footer'>
           <footer>
             <p className='made-with-smiles'>Made with ☻ in Providence, RI, USA</p>
-            <p className='copyright'>Copyright © 2019 Splitwise, Inc. All rights reserved</p>
+            <p className='copyright'>Copyright © 2019 Splatwise, Inc. All rights reserved</p>
           </footer>
         </div>
       </div>
