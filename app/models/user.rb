@@ -1,29 +1,40 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  username        :string           not null
+#  email           :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
 class User < ApplicationRecord
 
   validates :username, :email, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 8, allow_nil: true}
 
-# Possible signup errors include:
-# - First name can't be blank
-# - Email address can't be blank
-# - Please enter a valid email address.
-# - Password is too short (minimum is 8 characters)
-# - Password is too common (e.g. '12345', 'password', etc) - please choose something more complex or unique
-
   after_initialize :ensure_session_token
 
   attr_accessor :password
 
-  has_many :friends,
-  class_name: 'User',
-  foreign_key: :requestor_id
+  has_many :initiated_friendships,
+  class_name: 'Friendship',
+  foreign_key: :inviter_id
 
-  belongs_to :user,
-  class_name: 'User',
-  foreign_key: :requestee_id
+  has_many :accepted_friendships,
+  class_name: 'Friendship',
+  foreign_key: :invitee_id
 
-  # user has many friends through friendships.  make friendships table and model
+  has_many :invitees,
+  through: :initiated_friendships,
+  source:  :invitee
 
+  has_many :inviters,
+  through: :accepted_friendships,
+  source:  :inviter
 
   def password=(password)
     @password = password
@@ -49,10 +60,12 @@ class User < ApplicationRecord
   end
 
   def self.find_by_credentials(email, password)
-    # debugger  
+    # debugger
     user = User.find_by(email: email)
     user && user.is_password?(password) ? user : nil
   end
 
+  def friends
+    self.inviters.concat(self.invitees)
+  end
 end
-
