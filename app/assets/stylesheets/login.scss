@@ -35,14 +35,25 @@
   // position: absolute;
   // top: 0;
   // left: 0;
-  height: 24px;
-  padding: 12px 10px;
+  height: 40px;
+  padding: 7px 10px;
+  // margin-bottom: 15px;
+  // padding-bottom: 30px;
+}
+
+.logo-splatmark {
+  position: relative;
+  bottom: 38px;
+  font-size: 40px;
+  font-family: 'Mansalva', cursive;
+  // height: 50px;
+  // padding-bottom: 50px;
 }
 
 .login-button {
   background-color: #ff652f;
   color: #fff;
-  text-shadow: 0 -1px 0 #c83400;
+  text-shadow: 0 -1px 0 #885340;
   font-size: 18px;
   padding: 4px 10px 4px;
   border-radius: 5px;

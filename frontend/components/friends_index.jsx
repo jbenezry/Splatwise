@@ -17,11 +17,11 @@ const mdp = dispatch => {
 const FriendsIndex = props => {
   // debugger
   // return props.friendIds
-  const friends = props.friendIds.map(friendId => (
-    <li key={friendId}>{props.users[friendId]}</li>
-  ))
+  // const friends = props.friendIds.map(friendId => (
+  //   <li key={friendId}>{props.users[friendId]}</li>
+  // ))
 
-  return <ul>{friends}</ul>
+  return  <ul></ul>  //<ul>{friends}</ul>
 }
 
   

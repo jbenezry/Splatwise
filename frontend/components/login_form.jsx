@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -45,9 +46,11 @@ class LoginForm extends React.Component {
         <nav className='nav-bar'>
           <div className='nav-bar-left'>
             <img className='logo-wordmark' src={window.logoWordmarkURL} alt='logo-wordmark'/>
-            <p className='logo-splatmark'>Splatwise</p>
+            <p className='logo-splatmark'>S P L A T W I S E</p>
           </div>
-          <input className='nav-signup-button' type="submit" value="Sign Up" />
+          <Link to='/signup'>
+            <input className='nav-signup-button' type="submit" value="Sign up" />
+          </Link>
         </nav>
         <div className='wrapper'>
           <div className='login-page-left'>

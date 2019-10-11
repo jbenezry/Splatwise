@@ -1,0 +1,57 @@
+.splash-body {
+  // background-image: image-url('marble_tile.jpg');
+  // background-color: green;
+  // height: 1000px;
+}
+
+.logged-out-nav-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-login-button {
+  background-color: #5bc5a7;
+  color: #fff;
+  text-shadow: 0 -1px 0 #39a385;
+  font-size: 16px;
+  padding: 4px 10px 4px;
+  border-radius: 4px;
+  height: 30px;
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);// why are there three? I copied this from dev tools
+  margin: 10px 10px;
+  text-decoration: none;
+ 
+}
+
+.nav-signup-button {
+  background-color: #ff652f;
+  color: #fff;
+  text-shadow: 0 -1px 0 #c83400;
+  font-size: 16px;
+  padding: 4px 10px 4px;
+  border-radius: 4px;
+  height: 30px;
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);// why are there three? I copied this from dev tools
+  margin: 10px 10px;
+  text-decoration: none;
+}
+
+.splash-header {
+  display: flex;
+  justify-content: center;
+}
+
+.splash-body {
+  // width: 200px;
+  // height: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.splash-desktop {
+  height: 600px;
+}
+
+.splash-mobile {
+  height: 600px;
+}

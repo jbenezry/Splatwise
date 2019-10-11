@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, HashRouter } from 'react-router-dom';
+import { Route, HashRouter, Switch } from 'react-router-dom';
 import SignupFormContainer from './signup_form_container'
 import LoginFormContainer from './login_form_container'
 import DashboardContainer from './dashboard_container'
@@ -17,10 +17,12 @@ const Root = ({store}) => {
         {/* <Header />
         <Route exact path="/" component={Feed} />
         <Route path="/users" component={Users} /> */}
-        <ProtectedRoute exact path='/dashboard' component={DashboardContainer}/>
-        <AuthRoute exact path='/' component={Splash} />
-        <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <AuthRoute exact path="/login" component={LoginFormContainer} />
+        <Switch>
+          <ProtectedRoute exact path='/dashboard' component={DashboardContainer}/>
+          <AuthRoute exact path="/signup" component={SignupFormContainer} />
+          <AuthRoute exact path="/login" component={LoginFormContainer} />
+          <AuthRoute exact path='/' component={Splash} />
+        </Switch>
       </div>
     </HashRouter>
   </Provider>

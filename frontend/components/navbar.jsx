@@ -18,9 +18,11 @@ const Navbar = (props) => {
   )
 }
 
+// const greeting = [state.session.id] ? state.entities.users[state.session.id].username : 'Welcome'
+
 const msp = state => {
   return {
-    username: state.entities.users[state.session.id].username
+    // username: state.entities.users[state.session.id].username
   }
 }
 
@@ -30,4 +32,4 @@ const mdp = dispatch => {
   }
 }
 
-export default connect (msp, mdp)(Navbar)
+export default connect(msp, mdp)(Navbar);

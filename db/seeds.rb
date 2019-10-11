@@ -14,7 +14,7 @@ users = User.create([
   { username: 'Sheryl Sandberg', email: 'sheryl@facebook.com', password: 'ilovefacebook' },
   { username: 'Jack Ma', email: 'jack@alibaba.com', password: 'ilovealibaba' },
   { username: 'Anne Wojcicki', email: 'anne@23andme.com', password: 'ilove23andme' },
-  { username: 'Mark Zuckerberg', email: 'mark@facebook.com', password: 'ilovefacebook' },
+  { username: 'Mark Zuckerberg', email: 'mark@facebook.com', password: 'ilovefacebook' }
   # { username: 'Payal Kadakia', email: 'payal@classpass.com', password: 'iloveclasspass' },
   # { username: 'Belinda Johnson', email: 'belinda@airbnb.com', password: 'iloveairbnb' },
   # { username: 'Bill Gates', email: 'bill@msn.com', password: 'ilovemicrosoft' },

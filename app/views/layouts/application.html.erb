@@ -10,6 +10,8 @@
     <%= javascript_include_tag 'application' %>
     
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+
     <% if current_user  %>
     <%# below we set the currentUser to the window and then set it equal to an object with keys and values that match what's being rendered in our show.json.jbuilder file%>
       <script>
@@ -22,7 +24,12 @@
     <% end %>
       <script type='text/javascript'>
         window.logoSquareURL = '<%= image_url('logo-square.svg') %>'
-        window.logoWordmarkURL = '<%= image_url('logo-wordmark.svg') %>'
+        window.logoWordmarkURL = '<%= image_url('logo-wordmark.png') %>'
+        window.marbleTileURL = '<%= image_url('marble_tile.jpg') %>'
+        //window.planeURL = '<%= image_url('plane.svg') %>'
+        window.houseURL = '<%= image_url('house.svg') %>'
+        window.desktopURL = '<%= image_url('desktop.png') %>'
+        window.mobileURL = '<%= image_url('mobile.png') %>'
       </script>
     
   </head>
