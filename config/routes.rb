@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'static_pages#root'
 
   namespace :api, defaults: { format: "json" } do
-    resources :users, only: [ :create ]     # a new controller action is not needed b/c we are using components for forms, so we don't need to render new views
+    resources :users, only: [ :create, :index, :show ]     # a new controller action is not needed b/c we are using components for forms, so we don't need to render new views
     resource :session, only: [ :create, :destroy ]
   end
 

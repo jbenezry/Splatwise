@@ -9,7 +9,7 @@ const msp = state => {
 }
 
 const Auth = ({ loggedIn, path, component: Component }) => {
-  return <Route path={path} render={props => (loggedIn ? <Redirect to='/greeting' /> : <Component {...props} />) } />
+  return <Route path={path} render={props => (loggedIn ? <Redirect to='/dashboard' /> : <Component {...props} />) } />
 }
 
 const Protected = ({ loggedIn, path, component: Component }) => {

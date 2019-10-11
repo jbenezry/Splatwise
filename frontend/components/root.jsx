@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, HashRouter } from 'react-router-dom';
 import SignupFormContainer from './signup_form_container'
 import LoginFormContainer from './login_form_container'
-import GreetingContainer from './greeting_container'
+import DashboardContainer from './dashboard_container'
 import {Provider} from 'react-redux'
 import Splash from './splash'
 import { AuthRoute, ProtectedRoute } from '../util/route_utils'
@@ -17,7 +17,7 @@ const Root = ({store}) => {
         {/* <Header />
         <Route exact path="/" component={Feed} />
         <Route path="/users" component={Users} /> */}
-        <ProtectedRoute exact path='/greeting' component={GreetingContainer}/>
+        <ProtectedRoute exact path='/dashboard' component={DashboardContainer}/>
         <AuthRoute exact path='/' component={Splash} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/login" component={LoginFormContainer} />

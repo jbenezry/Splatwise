@@ -66,6 +66,7 @@ class User < ApplicationRecord
   end
 
   def friends
+    # debugger
     self.inviters.concat(self.invitees)
   end
 end

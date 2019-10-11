@@ -22,12 +22,3 @@ export const logout = () => {
     url: "/api/session"
   });
 }
-
-//reducers to write:
-
-//root
-//entities, session, //errors
-  //users                //session_errors
-
-
-  //entities are domain objects (e.g. users) - they are represented by models

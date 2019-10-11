@@ -11,8 +11,8 @@
 
 class Friendship < ApplicationRecord
 
-validates_uniqueness_of :inviter_id, scope: [:invitee_id]
-validates_uniqueness_of :invitee_id, scope: [:inviter_id]
+# validates_uniqueness_of :inviter_id, scope: [:invitee_id]
+# validates_uniqueness_of :invitee_id, scope: [:inviter_id]
 
 belongs_to :inviter,
 class_name: 'User',

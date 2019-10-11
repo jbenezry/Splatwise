@@ -113,3 +113,19 @@ h2 {
   list-style: circle;
 }
 
+.signup-form {
+  position: relative; /* any positioned ancestor can be positioned relative to this element*/
+  height: 200px;
+}
+
+.hide-email {
+  position: absolute;
+  background-color: chartreuse;
+  width: 100%;
+  top: 10%;
+  transition: 0.5s;
+}
+  .reveal {
+  top: 85%;
+}
+

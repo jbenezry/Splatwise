@@ -1,11 +1,17 @@
 .nav-bar {
   display: flex;
-  // justify-content: space-between;
+  justify-content: space-between;
   height: 50px;
   color: #fff;
   background-color: #5bc5a7;
   text-shadow: 0 -1px 0 #39a385;
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.nav-bar-left {
+  display: flex;
+  font-size: 20px;
+  // width: 30px;
 }
 
 .nav-signup-button {

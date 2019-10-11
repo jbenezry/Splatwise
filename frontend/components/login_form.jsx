@@ -43,8 +43,10 @@ class LoginForm extends React.Component {
     return (
       <div className='overall'>
         <nav className='nav-bar'>
-          <img className='logo-wordmark' src={window.logoWordmarkURL} alt='logo-wordmark'/>
-          <p className='logo-splatmark'>Splatwise</p>
+          <div className='nav-bar-left'>
+            <img className='logo-wordmark' src={window.logoWordmarkURL} alt='logo-wordmark'/>
+            <p className='logo-splatmark'>Splatwise</p>
+          </div>
           <input className='nav-signup-button' type="submit" value="Sign Up" />
         </nav>
         <div className='wrapper'>
@@ -80,7 +82,7 @@ class LoginForm extends React.Component {
         </div>
         <div className='footer'>
           <footer>
-            <p className='made-with-smiles'>Made with ☻ in Providence, RI, USA</p>
+            <p className='made-with-smiles'>Made with ☻ in New York, NY, USA</p>
             <p className='copyright'>Copyright © 2019 Splatwise, Inc. All rights reserved</p>
           </footer>
         </div>

@@ -23,6 +23,14 @@ Things you may want to cover:
 
 * ...
 
+10/10/19 To do
+
+1. write RECEIVE_ALL_USERS case for usersReducer
+2. write fetchAllUsers controller action
+3. write componentDidMount 
+
+entities are domain objects (e.g. users) - they are represented by models
+
 #  Splitwise signup errors include:
 # - First name can't be blank
 # - Email address can't be blank
@@ -57,7 +65,6 @@ Things you may want to cover:
 - need model-level validation for inclusion.  database constraint doesn't exit
 - migration - make status a string.
 - need a pointer from user to their friends.  user has_many friends through friendships
-
 
 1. seed database (create faux users).  run be rails db:seed once its ready
 2. go through friendships to users where invitee_id == current_user.id or inviter_id == current_user.id
