@@ -24,13 +24,21 @@ class Dashboard extends React.Component {
     return (
       <div className='wrapper'>
         <Navbar/>
-        <div className='sidenav'>
-          <ul>
-            <FriendsIndex/>
-          </ul>
-          <br/>
-            <UsersIndex/>
+
+        <div>
+          <div className='sidenav'>
+            <ul>
+              <FriendsIndex/>
+            </ul>
+            <br/>
+              <UsersIndex/>
+          </div>
+          
+          <div>
+            <img className='under-construction' src={window.underConstructionURL} alt="Under Construction"/>
+          </div>
         </div>
+        
       </div>
     )
   }

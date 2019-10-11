@@ -7,6 +7,9 @@ const UsersIndex = props => {
   ))
     
   return <ul>{users}</ul>
+    // <div>
+    //   <p>USERS:</p>
+    // </div>
 }
 
 const msp = state => {

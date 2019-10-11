@@ -6,6 +6,8 @@
   background-color: #5bc5a7;
   text-shadow: 0 -1px 0 #39a385;
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  width: 100%;
+  z-index: 30;
 }
 
 .nav-bar-left {
@@ -41,6 +43,17 @@
   // padding-bottom: 30px;
 }
 
+.logo-logged-in-splatmark {
+  position: relative;
+  bottom: 38px;
+  font-size: 40px;
+  font-family: 'Mansalva', cursive;
+  // height: 50px;
+  // padding-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: .4em;
+}
+
 .logo-splatmark {
   position: relative;
   bottom: 38px;
@@ -48,7 +61,10 @@
   font-family: 'Mansalva', cursive;
   // height: 50px;
   // padding-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: .4em;
 }
+
 
 .login-button {
   background-color: #ff652f;

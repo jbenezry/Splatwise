@@ -11,7 +11,7 @@ const LoggedOutNavbar = (props) => {
     <nav className='nav-bar'>
       <div className='nav-bar-left'>
         <img className='logo-wordmark' src={window.logoWordmarkURL} alt='logo-wordmark' />
-        <p className='logo-splatmark'>S P L A T W I S E</p>
+        <p className='logo-splatmark'>SPLATWISE</p>
       </div>
       <div className='logged-out-nav-buttons'>
         <div> 

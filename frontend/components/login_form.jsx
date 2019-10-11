@@ -46,7 +46,7 @@ class LoginForm extends React.Component {
         <nav className='nav-bar'>
           <div className='nav-bar-left'>
             <img className='logo-wordmark' src={window.logoWordmarkURL} alt='logo-wordmark'/>
-            <p className='logo-splatmark'>S P L A T W I S E</p>
+            <p className='logo-splatmark'>SPLATWISE</p>
           </div>
           <Link to='/signup'>
             <input className='nav-signup-button' type="submit" value="Sign up" />

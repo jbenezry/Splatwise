@@ -23,6 +23,7 @@ class Api::FriendshipsController < ApplicationController
       render json: ['friend not found'], status: 422
       # we want to render errors in an array
     end
+  end
 
 end
 

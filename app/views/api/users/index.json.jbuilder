@@ -3,7 +3,7 @@
     # json.partial! 'api/users/user', user: user
     json.extract! user, :id, :username
 
-    json.friend_ids user.friends.map(&:id)
+    # json.friend_ids user.friends.map(&:id)
   end
 end
 

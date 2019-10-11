@@ -23,6 +23,17 @@ Things you may want to cover:
 
 * ...
 
+10/11/19 - presentation
+1. Splash page - buttons have hover effect, favicon
+2. Login:
+  a. show login error
+  b. login as whitney
+3. Signup:
+  a. show signup errors
+  b. sign up connor "cash money" baker, an aspiring tech mogul
+4. log back in, show that connor has been added
+
+
 10/10/19 To do
 
 1. write RECEIVE_ALL_USERS case for usersReducer

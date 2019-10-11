@@ -20,7 +20,11 @@
   border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);// why are there three? I copied this from dev tools
   margin: 10px 10px;
   text-decoration: none;
- 
+}
+
+.nav-login-button:hover {
+  background-color: #4da58c;
+  cursor: pointer;
 }
 
 .nav-signup-button {

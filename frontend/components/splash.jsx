@@ -6,11 +6,8 @@ const Splash = props => {
     return (
     <div className='splash-wrapper'>
       <LoggedOutNavbar/>
-      <header className='splash-header'>
-          <h1>Less stress when sharing expenses on trips.</h1>
-          <br/>
-          <h3>Keep track of your shared expenses and balances with housemates, trips, groups, friends, and family.</h3>
-      </header>
+          <h1 className='splash-header'>Less stress when sharing expenses.</h1>
+          <h3 className='splash-header'>Keep track of your shared expenses and balances with housemates, trips, groups, friends, and family.</h3>
       <div className='splash-body'>
         <img className='splash-desktop' src={window.desktopURL} alt='desktop'/>
         <img className='splash-mobile' src={window.mobileURL} alt='mobile'/>

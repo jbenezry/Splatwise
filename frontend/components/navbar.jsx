@@ -8,7 +8,7 @@ const Navbar = (props) => {
     <nav className='nav-bar'>
       <div className='nav-bar-left'>
         <img className='logo-wordmark' src={window.logoWordmarkURL} alt='logo-wordmark' />
-        <p className='logo-splatmark'>Splatwise</p>
+        <p className='logo-logged-in-splatmark'>SPLATWISE</p>
       </div>
       <div>
         <input onClick={props.logout} className='nav-logout-button' type="submit" value="Log out" />

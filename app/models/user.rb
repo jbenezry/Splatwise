@@ -65,8 +65,8 @@ class User < ApplicationRecord
     user && user.is_password?(password) ? user : nil
   end
 
-  def friends
-    # debugger
-    self.inviters.concat(self.invitees)
-  end
+  # def friends
+  #   # debugger
+  #   self.inviters.concat(self.invitees)
+  # end
 end
